@@ -8,6 +8,14 @@
   <remote name="javanese-devices"
           fetch="https://github.com/Javanese-OS-Devices"
           revision="11" />
+ 
+  <remote name="javanese"
+          fetch="https://github.com/Javanese-OS"
+          revision="11"
+  
+  <remote name="rayhandz"
+          fetch="https://github.com/RayhanDz"
+          revision="11"
 
   <remote name="gitlab"
           fetch="https://gitlab.com"
