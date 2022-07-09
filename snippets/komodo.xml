@@ -4,10 +4,9 @@
   <remote name="komodo"
           fetch="https://github.com/Komodo-OS-Rom"
           revision="11"
-          review="gerrit.komodo-os.my.id" />
 
-  <remote name="komodo-devices"
-          fetch="https://github.com/Komodo-OS-Devices"
+  <remote name="javanese-devices"
+          fetch="https://github.com/Javanese-OS-Devices"
           revision="11" />
 
   <remote name="gitlab"
@@ -17,7 +16,7 @@
   <!-- General repos -->
   <project path="art" name="art" remote="komodo" />
   <project path="bionic" name="bionic" remote="komodo" />
-  <project path="build/make" name="build" remote="komodo">
+  <project path="build/make" name="build" remote="javanese">
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -26,7 +25,7 @@
     <linkfile src="target" dest="build/target" />
     <linkfile src="tools" dest="build/tools" />
   </project>
-  <project path="build/soong" name="build_soong" remote="komodo" >
+  <project path="build/soong" name="build_soong" remote="javanese" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
@@ -52,7 +51,6 @@
   <!-- External -->
   <project path="external/airbnb-lottie" name="external_airbnb-lottie" remote="komodo" />
   <project path="external/exfatprogs" name="external_exfatprogs" remote="komodo" />
-  <project path="external/faceunlock" name="external_faceunlock" remote="komodo" />
 
   <!-- HAL CAF -->
   <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" remote="komodo" />
@@ -78,8 +76,8 @@
 
   <!-- Komodo and The Others -->
   <project path="manifest" name="manifest" remote="komodo" />
-  <project path="vendor/komodo" name="vendor_komodo" remote="komodo" >
-    <copyfile src="masak.sh" dest="masak" />
+  <project path="vendor/javanese" name="vendor_javanese" remote="rayhandz" >
+    <copyfile src="mka.sh" dest="mka" />
   </project>
   <project path="vendor/google/gms" name="NusantaraProject/vendor_google_gms" remote="gitlab" revision="11" />
   <project path="vendor/google/pixel" name="NusantaraProject/vendor_google_pixel" remote="gitlab" revision="11" />
@@ -102,20 +100,18 @@
   <project path="system/tools/hidl" name="system_tools_hidl" remote="komodo" />
 
   <!-- Packages repos -->
-  <project path="packages/apps/KomodoSettings" name="packages_apps_KomodoSettings" remote="komodo" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="komodo" />
-  <project path="packages/apps/KomodoIsland" name="packages_apps_KomodoIsland" remote="komodo" />
   <project path="packages/apps/Nfc" name="packages_apps_Nfc" remote="komodo" />
   <project path="packages/apps/Bluetooth" name="packages_apps_Bluetooth" remote="komodo" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="komodo" />
-  <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" remote="komodo" />
   <project path="packages/apps/Updates" name="packages_apps_Updates" remote="komodo" />
+  <project path="packages/apps/Settings/JavaneseSettings" name="packages_apps_JavaneseArea" groups="pdk-fs" remote="javanese" />
+  <project path="packages/apps/JavaneseWidget" name="packages_apps_JavaneseWidget" groups="pdk-fs" remote="javanese" />
 
   <!-- Packages service -->
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="komodo" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" remote="komodo" />
-  <project path="packages/apps/FaceUnlockService" name="packages_apps_FaceUnlockService" remote="komodo" />
-
+  <project path="packages/apps/FaceUnlockService" name="ReveRTX/packages_apps_FaceUnlockService" remote="gitlab" revision="11" />
+ 
   <!-- Sepolicy -->
   <project path="device/komodo/sepolicy" name="device_komodo_sepolicy" remote="komodo" />
   <project path="device/qcom/sepolicy-legacy" name="device_qcom_sepolicy-legacy" remote="komodo" />
